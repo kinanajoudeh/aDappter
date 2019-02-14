@@ -1,3 +1,18 @@
-<div class="dashboard">
-  todo
+<div class="container" style="overflow:scroll">
+  <div class="chartDiv">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    ></canvas>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/Curve">Curve</a>
+    </li>
+  </ul>
 </div>
