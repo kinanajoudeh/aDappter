@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  projects = [{name: "Save The Foxes", description: "Make life more foxy"},
+              {name: "Save The Foxes", description: "Make life more foxy"},
+              {name: "Save The Foxes", description: "Make life more foxy"},
+              {name: "Save The Foxes", description: "Make life more foxy"},
+              {name: "Save The Foxes", description: "Make life more foxy"}]
+
   constructor() { }
 
   ngOnInit() {
