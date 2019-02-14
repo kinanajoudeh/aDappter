@@ -15,6 +15,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { routes } from "./routes/routes";
 import { ProjectsComponent } from "./projects/projects.component";
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
     LayoutComponent,
     LoginComponent,
     DashboardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,

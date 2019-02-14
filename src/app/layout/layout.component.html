@@ -1,8 +1,14 @@
 <nz-layout class="layout">
-  <nz-header>
-    <div class="logo-todo"></div>
+  <nz-header class="topbar">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="../../assets/logo.png" />
+        <span class="title">aDappter</span>
+      </a>
+    </div>
     <ul
       nz-menu
+      class="menu"
       [nzTheme]="'dark'"
       [nzMode]="'horizontal'"
       style="line-height: 64px;"
@@ -16,6 +22,16 @@
         <span class="nav-text">{{ child.text }}</span>
       </li>
     </ul>
+    <div class="user">
+      <nz-dropdown [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+        <a nz-dropdown> Human Being <i nz-icon type="down"></i> </a>
+        <ul nz-menu>
+          <li nz-menu-item>Settings</li>
+          <li nz-menu-divider></li>
+          <li nz-menu-item><i nz-icon type="poweroff"></i>Logout</li>
+        </ul>
+      </nz-dropdown>
+    </div>
   </nz-header>
   <nz-content class="content">
     <router-outlet></router-outlet>
