@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { ChartsModule } from 'ng2-charts';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NgZorroAntdModule, NZ_I18N, en_US } from "ng-zorro-antd";
@@ -27,6 +27,7 @@ registerLocaleData(en);
     ProjectsComponent
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
