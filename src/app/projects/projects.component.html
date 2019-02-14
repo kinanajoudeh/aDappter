@@ -1,20 +1,14 @@
 <div nz-row>
     <div nz-col nzSpan="6" *ngFor="let item of projects; let i = index">
       <div nz-row nzSpan="6">
-        <nz-card class="nz-card" [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+        <nz-card class="nz-card" [nzCover]="coverTemplate" [nzActions]="[donate]">
           <nz-card-meta nzTitle="{{item.name}}" nzDescription="{{item.description}}" [nzAvatar]="avatarTemplate"></nz-card-meta>
         </nz-card>
         <ng-template #coverTemplate>
           <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>
         </ng-template>
-        <ng-template #actionSetting>
-          <i nz-icon type="setting"></i>
-        </ng-template>
-        <ng-template #actionEdit>
-          <i nz-icon type="edit"></i>
-        </ng-template>
-        <ng-template #actionEllipsis>
-          <i nz-icon type="ellipsis"></i>
+        <ng-template #donate>
+          <p style="margin:0px">Find out more</p>
         </ng-template>
       </div>
     </div>
