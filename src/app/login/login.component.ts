@@ -1,34 +1,34 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"]
+  selector: 'login',
+  templateUrl:'login.component.html',
+  styleUrls: ["login.component.scss"]
 })
 export class LoginComponent implements OnInit {
   validateForm: FormGroup;
 
-  _submitForm() {
+  submitForm(): void {
     for (const i in this.validateForm.controls) {
-      this.validateForm.controls[i].markAsDirty();
-    }
-    if (this.validateForm.valid) {
-      console.log("Valid!");
-      console.log(this.validateForm.value);
-      this.router.navigate(["dashboard"]);
+      this.validateForm.controls[ i ].markAsDirty();
+      this.validateForm.controls[ i ].updateValueAndValidity();
     }
   }
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder) {
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.validateForm = this.fb.group({
-      userName: [null, [Validators.required]],
-      password: [null, [Validators.required]],
-      remember: [true]
+      userName: [ null, [ Validators.required ] ],
+      password: [ null, [ Validators.required ] ],
+      remember: [ true ]
     });
   }
 }
