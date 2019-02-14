@@ -1,0 +1,24 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo-todo"></div>
+    <ul
+      nz-menu
+      [nzTheme]="'dark'"
+      [nzMode]="'horizontal'"
+      style="line-height: 64px;"
+    >
+      <li
+        *ngFor="let child of menu"
+        nz-menu-item
+        [routerLink]="child.link"
+        [nzSelected]="child.selected"
+      >
+        <span class="nav-text">{{ child.text }}</span>
+      </li>
+    </ul>
+  </nz-header>
+  <nz-content class="content">
+    <router-outlet></router-outlet>
+  </nz-content>
+  <nz-footer style="text-align: center;">aDappter @ ETHZ ©2019</nz-footer>
+</nz-layout>
