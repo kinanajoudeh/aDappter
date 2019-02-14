@@ -30,12 +30,14 @@
       />
     </div>
     <div nz-row nzSpan="12">
-      <nz-progress
-        [nzPercent]="80"
-        nzType="circle"
-        [nzFormat]="formatTwo"
-      ></nz-progress
-      >`
+      <nz-progress [nzPercent]="80" nzType="circle"   [nzFormat]="formatTwo"></nz-progress>`
+      <p> 80% of 2000 tokens have been generated. Help complete this project!</p>
+      <nz-input-group nzSearch nzSize="large" [nzSuffix]="suffixButton">
+        <input type="text" nz-input placeholder="Insert amount of tokens here...">
+    </nz-input-group>
+    <ng-template #suffixButton>
+      <button nz-button nzType="danger" nzSize="large" nzSearch>Donate</button>
+    </ng-template>
     </div>
   </div>
 </div>

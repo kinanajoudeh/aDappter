@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
       this.validateForm.controls[ i ].markAsDirty();
       this.validateForm.controls[ i ].updateValueAndValidity();
     }
+    localStorage.setItem('id', "101" );
+
   }
 
   constructor(private fb: FormBuilder) {
