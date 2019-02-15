@@ -6,23 +6,59 @@ import { Component } from "@angular/core";
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent {
-  public barChartOptions = {};
-  public barChartLabels = ["Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  projects = [
+    {
+      name: "Save The Foxes",
+      description: "Make life more foxy",
+      id: 0,
+      status: "100"
+    },
+    {
+      name: "Save The Foxes",
+      description: "Make life more foxy",
+      id: 1,
+      status: "20"
+    },
+    {
+      name: "Save The Foxes",
+      description: "Make life more foxy",
+      id: 3,
+      status: "1"
+    },
+    {
+      name: "Save The Foxes",
+      description: "Make life more foxy",
+      id: 2,
+      status: "90"
+    }
+  ];
+  public barChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: "Oil consumptions (Liters)"
+          }
+        }
+      ]
+    }
+  };
+  public barChartLabels = ["Nov", "Dec", "Jan"];
   public barChartType = "bar";
   public barChartLegend = true;
   public barChartData = [
-    {data: [11, 13, 43], label: "A"},
-      {data: [2, 4, 4], label: "B"},
-      {data: [1, 13, 3], label: "C", type: 'line'}
+    {
+      data: [123, 121, 120],
+      label: "Baseline",
+      type: "bar"
+    },
+    { data: [124, 120, 119], label: "Your monthly consumption", type: "bar" },
+    { data: [125, 122, 121], label: "Swiss average consumption", type: "bar" }
   ];
+  public barChartColors = [];
 
-  ngOnInit() {
-    setTimeout(function(){
-      this.barChartData = [
-        {data: [110, 13, 43], label: "A"},
-          {data: [2, 4, 4], label: "B"},
-          {data: [1, 13, 3], label: "C", type: 'line'}
-      ];
-    }.bind(this), 2000);
-  }
- }
+  ngOnInit() {}
+}

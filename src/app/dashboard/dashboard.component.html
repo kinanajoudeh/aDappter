@@ -1,18 +1,64 @@
-<div class="container" style="overflow:scroll">
-  <div class="chartDiv">
-    <canvas
-      baseChart
-      [datasets]="barChartData"
-      [labels]="barChartLabels"
-      [options]="barChartOptions"
-      [legend]="barChartLegend"
-      [chartType]="barChartType"
-    ></canvas>
-  </div>
+<div class="container">
+  <div nz-row class="stats" nzGutter="8">
+    <div nz-col [nzSpan]="6">
+      <nz-card nzTitle="Token overview" class="tokens">
+        <span class="balance">Available tokens</span>
+        <h1><i nz-icon type="pay-circle" theme="outline"></i> 1.23</h1>
+        <nz-divider></nz-divider>
 
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/Curve">Curve</a>
-    </li>
-  </ul>
+        <p class="secondary">
+          So far you have donated<br />
+          <span><i nz-icon type="pay-circle" theme="outline"></i> 1.1</span>
+        </p>
+        <p class="secondary">
+          National donations amount to<br />
+          <span><i nz-icon type="pay-circle" theme="outline"></i> 123424</span>
+        </p>
+      </nz-card>
+    </div>
+    <div nz-col [nzSpan]="18">
+      <nz-card class="graph" nzTitle="Oil consumption stats">
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          [colors]="barChartColors"
+        ></canvas>
+      </nz-card>
+    </div>
+  </div>
+  <div nz-row class="row" nzGutter="6">
+    <nz-card class="projects" nzTitle="Projects you funded">
+      <div
+        nz-col
+        nzSpan="5"
+        *ngFor="let item of projects"
+        class="project-entry"
+      >
+        <nz-card
+          class="nz-card"
+          [nzCover]="coverTemplate"
+          [nzActions]="[actionEllipsis]"
+        >
+          <nz-card-meta
+            nzTitle="{{ item.name }}"
+            nzDescription="{{ item.status }}% funded"
+            [nzAvatar]="avatarTemplate"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate>
+          <img
+            alt="example"
+            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </ng-template>
+        <ng-template #actionEllipsis>
+          <a routerLink="/projects/{{ item.id }}">See updates</a>
+        </ng-template>
+      </div>
+    </nz-card>
+  </div>
 </div>
