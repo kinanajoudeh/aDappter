@@ -24,7 +24,7 @@ export class DashboardComponent {
 
   constructor(private dashboardservice: DashboardService){
     this.id = localStorage.getItem('id');
-    this.dashboardservice.getEmissions().subscribe(emissions => {
+    /*this.dashboardservice.getEmissions().subscribe(emissions => {
       for(let e of emissions){
         if(e.owner == this.id){
           this.emissions.push(e);
@@ -33,7 +33,7 @@ export class DashboardComponent {
     });
     this.dashboardservice.getTokens(this.id).subscribe(tokens => {
       this.tokens = tokens;
-    });
+    });*/
   }
 
   ngOnInit() {
