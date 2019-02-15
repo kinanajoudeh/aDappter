@@ -5,8 +5,8 @@
     [nzActions]="[actionEllipsis]"
   >
     <nz-card-meta
-      nzTitle="{{ item.name }}"
-      nzDescription="{{ item.description }}"
+      nzTitle="{{ item.projectTitle }}"
+      nzDescription="{{ item.projectDescription }}"
       [nzAvatar]="avatarTemplate"
     ></nz-card-meta>
   </nz-card>
@@ -17,6 +17,8 @@
     />
   </ng-template>
   <ng-template #actionEllipsis>
-    <a routerLink="/projects/{{ item.id }}">Find out more</a>
+    <a routerLink="/projects/{{ item.projectID }}">Find out more</a>
   </ng-template>
 </div>
+
+{{ result | json }}

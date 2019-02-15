@@ -1,9 +1,11 @@
 import { Component } from "@angular/core";
+import { DashboardService } from "../dashboard.service";
 
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
   styleUrls: ["./dashboard.component.scss"]
+  // providers: [DashboardService]
 })
 export class DashboardComponent {
   projects = [
@@ -60,5 +62,21 @@ export class DashboardComponent {
   ];
   public barChartColors = [];
 
-  ngOnInit() {}
+  emissions = [];
+  tokens = [];
+  id;
+
+  constructor(private dashboardservice: DashboardService) {
+    this.id = localStorage.getItem("id");
+    /*this.dashboardservice.getEmissions().subscribe(emissions => {
+      for(let e of emissions){
+        if(e.owner == this.id){
+          this.emissions.push(e);
+        }
+      }
+    });
+    this.dashboardservice.getTokens(this.id).subscribe(tokens => {
+      this.tokens = tokens;
+    });*/
+  }
 }
