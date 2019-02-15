@@ -44,19 +44,16 @@
           [nzActions]="[actionEllipsis]"
         >
           <nz-card-meta
-            nzTitle="{{ item.name }}"
+            nzTitle="{{ item.projectTitle }}"
             nzDescription="{{ item.status }}% funded"
             [nzAvatar]="avatarTemplate"
           ></nz-card-meta>
         </nz-card>
         <ng-template #coverTemplate>
-          <img
-            alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
+          <img alt="example" src="{{ item.src }}" />
         </ng-template>
         <ng-template #actionEllipsis>
-          <a routerLink="/projects/{{ item.id }}">See updates</a>
+          <a routerLink="/projects/{{ item.projectID }}">See updates</a>
         </ng-template>
       </div>
     </nz-card>

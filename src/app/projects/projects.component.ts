@@ -23,7 +23,8 @@ export class ProjectsComponent {
       projectBalance: 1500,
       tokensGoal: 1000,
       status: "open",
-      src: "https://unsplash.com/photos/-Xq89mWvotk"
+      src:
+        "https://images.unsplash.com/photo-1536053414697-007fa93e0a99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2712&q=80"
     },
     {
       projectTitle: "WeForest",
@@ -31,7 +32,9 @@ export class ProjectsComponent {
       projectID: 1,
       projectBalance: 1000,
       tokensGoal: 2000,
-      status: "open"
+      status: "open",
+      src:
+        "https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
     },
     {
       projectTitle: "Pledge to Save the Bees",
@@ -40,7 +43,9 @@ export class ProjectsComponent {
       projectID: 2,
       projectBalance: 750,
       tokensGoal: 500,
-      status: "open"
+      status: "open",
+      src:
+        "https://images.unsplash.com/photo-1531254722074-92eebf4045ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
     },
     {
       projectTitle: "Recycling: Live a Sustainable Life",
@@ -48,7 +53,9 @@ export class ProjectsComponent {
       projectID: 3,
       projectBalance: 800,
       tokensGoal: 1000,
-      status: "open"
+      status: "open",
+      src:
+        "https://images.unsplash.com/photo-1516992654410-9309d4587e94?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
     },
     {
       projectTitle: "Electric Charger",
@@ -57,7 +64,9 @@ export class ProjectsComponent {
       projectID: 4,
       projectBalance: 1800,
       tokensGoal: 10000,
-      status: "open"
+      status: "open",
+      src:
+        "https://images.unsplash.com/photo-1516755538454-c8379d7a86aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
     },
     {
       projectTitle: "Public Transportation",
@@ -65,7 +74,9 @@ export class ProjectsComponent {
       projectID: 5,
       projectBalance: 5000,
       tokensGoal: 2500,
-      status: "open"
+      status: "open",
+      src:
+        "https://images.unsplash.com/photo-1508720666804-4253e0d846f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80"
     }
   ];
 
